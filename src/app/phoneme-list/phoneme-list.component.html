@@ -1,15 +1,15 @@
 <h2>Phonemes</h2>
 
-<div *ngFor="let product of products">
+<div *ngFor="let phoneme of phonemes">
 
   <h3>
-    <a [title]="product.name + ' details'">
-      {{ product.name }}
+    <a [title]="phoneme.name + ' details'">
+      {{ phoneme.name }}
     </a>
   </h3>
 
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
+  <p *ngIf="phoneme.description">
+    Description: {{ phoneme.description }}
   </p>
 
   <button (click)="share()">
@@ -17,7 +17,7 @@
   </button>
 
   <app-product-alerts
-  [product]="product"
+  [phoneme]="phoneme"
   (notify)="onNotify()">
 </app-product-alerts>
 </div>
